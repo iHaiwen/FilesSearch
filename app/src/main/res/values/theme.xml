@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Base" parent="android:Theme.Light">
+        <item name="android:windowTitleSize">@dimen/titlebar_height</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+        <!--<item name="android:buttonStyle">@style/CustomNormalButton</item>-->
+        <!--<item name="android:checkboxStyle">@style/CustomNormalCheckbox</item>-->
+        <!--<item name="android:radioButtonStyle">@style/CustomNormalRadioButton</item>-->
+        <!-- listview -->
+        <!-- <item name="android:listViewStyle">@style/CustomListView</item> -->
+        <item name="android:drawingCacheQuality">auto</item>
+        <item name="gdQuickActionBarItemStyle">@style/Widget.QuickAction.Bar.Item</item>
+    </style>
+</resources>

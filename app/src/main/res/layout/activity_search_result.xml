@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            android:id="@+id/search_content_layout">
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_margin="10dp"
+                android:src="@drawable/main_index_search"
+                android:id="@+id/search_button"/>
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_toLeftOf="@id/search_button"
+                  android:maxLines="3"
+                  android:ellipsize="end"
+                  android:hint="搜索关键字"
+                  android:id="@+id/search_text_edittext"/>
+
+    </RelativeLayout>
+
+    <ListView android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="15dp"
+            android:layout_below="@id/search_content_layout"
+            android:id="@+id/search_result_listview"
+            android:visibility="gone"/>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/search_content_layout"
+            android:gravity="center"
+            android:text="没搜索到结果哦"
+            android:id="@+id/non_result_textview"
+            android:visibility="gone"/>
+
+</RelativeLayout>

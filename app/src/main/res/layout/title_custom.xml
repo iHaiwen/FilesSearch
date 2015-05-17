@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_height"
+                android:background="@drawable/title_background"
+                android:gravity="center_vertical">
+
+    <com.mobile.hw.filessearch.ui.view.widget.CustomImageButton
+            android:id="@+id/title_left_button"
+            android:layout_width="@dimen/title_bar_button_size"
+            android:background="@null"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back_u" />
+
+    <TextView
+            android:id="@+id/title_right_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/deep_gray"
+            android:textSize="@dimen/text_size_15"
+            android:text="right"
+            android:visibility="visible" />
+
+    <TextView
+            android:id="@android:id/title"
+            style="@style/TitleBarTitleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxWidth="240dip"
+            android:singleLine="true"
+            android:text="title"/>
+
+</RelativeLayout>

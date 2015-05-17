@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright (C) 2010 Cyril Mottier (http://www.cyrilmottier.com)
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<resources>
+
+    <dimen name="arrow_offset">5dip</dimen>
+    <dimen name="box_height">70dip</dimen>
+    <dimen name="single_box_width">100dip</dimen>
+    <dimen name="shop_filter_button_height">45dip</dimen>
+    <dimen name="main_filter_item_height">45dp</dimen>
+    <dimen name="sub_filter_item_height">45dp</dimen>
+    <dimen name="filter_panel_bottom_margin">50dp</dimen>
+
+    <!-- 视觉规范 字号 -->
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_19">19sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_21">21sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_23">23sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_25">25sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_size_34">34sp</dimen>
+    <dimen name="text_size_35">35sp</dimen>
+    <dimen name="text_size_40">40sp</dimen>
+    <dimen name="text_size_44">44sp</dimen>
+    <dimen name="text_size_78">78sp</dimen>
+    
+        <!-- about tuan  -->
+    <dimen name="text_size_hint">14sp</dimen>
+    <dimen name="text_size_info">16sp</dimen>
+    <dimen name="text_size_list">18sp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="text_size_button">22sp</dimen>
+    
+    <dimen name="single_line_height">48dp</dimen>
+    <dimen name="table_item_padding">15dp</dimen>
+    <dimen name="section_height">22dp</dimen>
+    <dimen name="section_height_with_text">44dp</dimen>
+
+    <dimen name="listview_item_background_round_corner">9.0dip</dimen>
+
+    <dimen name="deal_extra_fragment_width">300dp</dimen>
+    <dimen name="add_photo_checkin_thumb_width">63dp</dimen>
+    <dimen name="hotel_detail_thumb_width">25dp</dimen>
+    <dimen name="photo_width">133dp</dimen>
+    <dimen name="photo_height">90dp</dimen>
+    <dimen name="movie_schedule_item_height">60dp</dimen>
+ 
+    <!-- 首页热门团购 -->
+    <dimen name="home_list_item_height">90dp</dimen>
+    <dimen name="home_list_header_height">25dp</dimen>
+    <dimen name="home_list_footer_height">35dp</dimen>
+
+    <dimen name="lottery_list_image_width">290dp</dimen>
+    <dimen name="lottery_list_image_height">168dp</dimen>
+    
+    
+    <dimen name="deal_flipper_fragment_page_margin">-30dp</dimen>
+    <dimen name="deal_list_image_width">110dp</dimen>
+    <dimen name="deal_list_image_height">82dp</dimen>
+    <dimen name="deal_list_item_title_width">200dip</dimen>
+    
+    <dimen name="agg_deal_list_image_width">90dp</dimen>
+    <dimen name="agg_deal_list_image_height">66dp</dimen>
+    
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="topic_grid_width">90dip</dimen>
+    <dimen name="topic_grid_height">70dip</dimen>
+
+    <!-- 预约预订 -->
+    <dimen name="booking_date_info_item_width">82dp</dimen>
+
+    <dimen name="shopinfo_marginleft">15dp</dimen>
+    <dimen name="shopinfo_marginright">17dp</dimen>
+
+    <!--导航栏 搜索框垂直距离-->
+    <dimen name="title_search_bar_margin_vertical">8dp</dimen>
+
+    <!--导航栏 按钮的距离（若有左右按钮）-->
+    <dimen name="title_bar_button_margin">15dp</dimen>
+
+    <!--导航栏 搜索框距左右按钮的距离（若有左右按钮）-->
+    <dimen name="title_bar_search_bar_horizontal_margin">15dp</dimen>
+
+    <dimen name="title_bar_button_size">40dp</dimen>
+
+    <!--点菜设置-->
+    <dimen name="orderdish_menu_category_list_item_height">45dp</dimen>
+    <dimen name="orderdish_menu_dish_list_item_height">75dp</dimen>
+
+    <!-- title bar height-->
+    <dimen name="titlebar_height">50dip</dimen>
+
+    <!-- 视觉规范 字号 -->
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="text_medium_1">16sp</dimen>
+    <dimen name="text_medium">14sp</dimen>
+    <dimen name="text_small">13sp</dimen>
+    <dimen name="text_very_small">12sp</dimen>
+
+    <dimen name="deal_filter_button_height">45dip</dimen>
+    <dimen name="fliper_title_height_size">45dip</dimen>
+</resources>

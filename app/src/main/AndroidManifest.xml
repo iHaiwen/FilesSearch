@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.mobile.hw.filessearch"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-sdk android:minSdkVersion="11"
+            android:targetSdkVersion="19"/>
+
+    <application android:label="@string/app_name"
+                 android:icon="@drawable/ic_launcher"
+                 android:theme="@style/Theme.Base"
+                 android:name=".ui.app.BaseApplication">
+
+        <activity android:name=".ui.view.MainActivity"
+                  android:screenOrientation="portrait"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.app.BaseActivity"
+                  android:label="Activity基类">
+        </activity>
+        <activity android:name=".ui.view.SearchResultActivity"
+                  android:label="搜索结果"
+                android:screenOrientation="nosensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:host="search"
+                      android:scheme="filesearch"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

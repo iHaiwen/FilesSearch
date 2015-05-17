@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- titlebar 颜色规范 -->
+    <color name="titlebar_main_title_text_color">#FF333333</color>
+    <color name="titlebar_sub_title_text_color">#FF333333</color>
+    <drawable name="title_background">#fcfcfc</drawable>
+    <drawable name="title_background_orange">@color/light_orange</drawable>
+    <color name="title_search_bar_hint_color">#999999</color>
+
+    <color name="light_orange">#ff8400</color>
+    <color name="light_line_gray">#a0a0a0</color>
+
+    <!-- 视觉规范 字体颜色 -->
+    <color name="more_gray">#FFBFB9B0</color>
+    <color name="light_grey">#FFF8F8F8</color>
+    <color name="light_gray">#FF999999</color>
+    <color name="middle_gray">#FF969696</color>
+    <color name="deep_gray">#FF333333</color>
+    <color name="orange_red">#FFFF8000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_gray">#FFABA9A5</color>
+    <color name="deep_orange_red">#FFE84200</color>
+    <color name="font_gray">#FF878787</color>
+    <color name="background_gray">#FFDCDCDC</color>
+    <color name="light_red">#FFFF6633</color>
+    <!-- 通用页面背景色 -->
+    <color name="common_bk_color">#FFF0F0F0</color>
+</resources>
