@@ -73,7 +73,7 @@ public class SettingPreference implements SettingContent {
     }
 
     private void readPreferenceData() {
-        Set<String> stringSet = sharedPreferences.getStringSet(DIRECTORY_PATHS_KEY, null);
+        Set<String> stringSet = preferences().getStringSet(DIRECTORY_PATHS_KEY, null);
         if (stringSet != null) {
             directoryPathArrayList.addAll(stringSet);
         }

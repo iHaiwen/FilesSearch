@@ -26,17 +26,11 @@ public class SearchFilesLogic implements SearchFileOperation{
 
     public SearchFilesLogic(SearchFilesListener searchFilesListener) {
         this.searchFilesListener = searchFilesListener;
-        if (this.searchFilesListener == null) {
-            throw new RuntimeException("search files listener is null");
-        }
     }
 
     @Override
     public void setSearchFilesListener(SearchFilesListener searchFilesListener) {
         this.searchFilesListener = searchFilesListener;
-        if (this.searchFilesListener == null) {
-            throw new RuntimeException("search files listener is null");
-        }
     }
 
     @Override
@@ -125,14 +119,20 @@ public class SearchFilesLogic implements SearchFileOperation{
     //call back
 
     private void callbackWhenSearchStart() {
-        searchFilesListener.onSearchFileStart(this);
+        if (searchFilesListener != null) {
+            searchFilesListener.onSearchFileStart(this);
+        }
     }
 
     private void callbackWhenSearchEnd() {
-        searchFilesListener.onFilesSearchEnd(this, matchedFileArrayList, true);
+        if (searchFilesListener != null) {
+            searchFilesListener.onFilesSearchEnd(this, matchedFileArrayList, true);
+        }
     }
 
     private void callbackWhenFindMatchedFile() {
-        searchFilesListener.onSearchFileResultChange(this, matchedFileArrayList);
+        if (searchFilesListener != null) {
+            searchFilesListener.onSearchFileResultChange(this, matchedFileArrayList);
+        }
     }
 }
