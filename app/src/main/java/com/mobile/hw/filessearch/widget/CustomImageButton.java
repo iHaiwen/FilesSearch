@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.ui.view.widget;
+package com.mobile.hw.filessearch.widget;
 
 import android.content.Context;
 import android.graphics.Color;

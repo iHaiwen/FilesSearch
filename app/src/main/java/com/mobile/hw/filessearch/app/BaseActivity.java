@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.ui.app;
+package com.mobile.hw.filessearch.app;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 import com.mobile.hw.filessearch.R;
-import com.mobile.hw.filessearch.ui.view.widget.BeautifulProgressDialog;
-import com.mobile.hw.filessearch.ui.view.widget.CustomImageButton;
+import com.mobile.hw.filessearch.widget.BeautifulProgressDialog;
+import com.mobile.hw.filessearch.widget.CustomImageButton;
 
 /**
  * Created with IntelliJ IDEA.

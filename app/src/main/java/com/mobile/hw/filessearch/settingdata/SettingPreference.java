@@ -1,10 +1,10 @@
-package com.mobile.hw.filessearch.store;
+package com.mobile.hw.filessearch.settingdata;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 
-import com.mobile.hw.filessearch.ui.app.BaseApplication;
+import com.mobile.hw.filessearch.app.BaseApplication;
 
 import java.util.ArrayList;
 import java.util.HashSet;

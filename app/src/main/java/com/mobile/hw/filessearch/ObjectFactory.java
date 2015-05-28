@@ -3,8 +3,8 @@ package com.mobile.hw.filessearch;
 
 import com.mobile.hw.filessearch.search.SearchFileOperation;
 import com.mobile.hw.filessearch.search.SearchFilesLogic;
-import com.mobile.hw.filessearch.store.SettingContent;
-import com.mobile.hw.filessearch.store.SettingPreference;
+import com.mobile.hw.filessearch.settingdata.SettingContent;
+import com.mobile.hw.filessearch.settingdata.SettingPreference;
 
 /**
  * Created with IntelliJ IDEA.

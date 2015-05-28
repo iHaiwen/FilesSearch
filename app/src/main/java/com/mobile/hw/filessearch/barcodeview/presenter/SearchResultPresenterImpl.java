@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.ui.presenter;
+package com.mobile.hw.filessearch.barcodeview.presenter;
 
 /**
  * Created with IntelliJ IDEA.

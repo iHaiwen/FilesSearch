@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.ui.util;
+package com.mobile.hw.filessearch.util;
 
 import android.content.*;
 import android.content.pm.PackageManager;

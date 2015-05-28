@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.ui.app;
+package com.mobile.hw.filessearch.app;
 
 /**
  * Created with IntelliJ IDEA.

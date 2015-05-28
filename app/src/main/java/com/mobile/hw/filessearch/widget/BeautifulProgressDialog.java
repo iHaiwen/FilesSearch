@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.ui.view.widget;
+package com.mobile.hw.filessearch.widget;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.mobile.hw.filessearch.R;
-import com.mobile.hw.filessearch.ui.util.Utils;
+import com.mobile.hw.filessearch.util.Utils;
 
 public class BeautifulProgressDialog extends AlertDialog implements android.view.View.OnClickListener {
 

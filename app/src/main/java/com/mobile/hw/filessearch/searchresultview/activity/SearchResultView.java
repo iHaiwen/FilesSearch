@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.ui.view;
+package com.mobile.hw.filessearch.searchresultview.activity;
 
 import java.io.File;
 import java.util.List;

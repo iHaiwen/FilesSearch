@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.store;
+package com.mobile.hw.filessearch.settingdata;
 
 import java.util.List;
 

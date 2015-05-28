@@ -1,7 +1,7 @@
-package com.mobile.hw.filessearch.ui.presenter;
+package com.mobile.hw.filessearch.barcodeview.presenter;
 
 
-import com.mobile.hw.filessearch.ui.app.BasePresenter;
+import com.mobile.hw.filessearch.app.BasePresenter;
 
 /**
  * Created with IntelliJ IDEA.

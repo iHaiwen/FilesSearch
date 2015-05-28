@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.ui.view;
+package com.mobile.hw.filessearch.barcodeview.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -9,8 +9,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import com.google.zxing.Result;
 import com.mobile.hw.filessearch.R;
-import com.mobile.hw.filessearch.R;
-import com.mobile.hw.filessearch.ui.app.BaseActivity;
+import com.mobile.hw.filessearch.app.BaseActivity;
+import com.mobile.hw.filessearch.barcodeview.fragment.BarcodeInputFragment;
 import com.welcu.android.zxingfragmentlib.BarCodeScannerFragment;
 
 public class MainActivity extends BaseActivity {

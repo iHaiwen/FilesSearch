@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.ui.view;
+package com.mobile.hw.filessearch.barcodeview.fragment;
 
 import android.content.Intent;
 import android.net.Uri;

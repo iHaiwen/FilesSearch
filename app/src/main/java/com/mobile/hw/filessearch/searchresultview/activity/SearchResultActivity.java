@@ -1,4 +1,4 @@
-package com.mobile.hw.filessearch.ui.view;
+package com.mobile.hw.filessearch.searchresultview.activity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.mobile.hw.filessearch.R;
-import com.mobile.hw.filessearch.ui.app.BaseActivity;
+import com.mobile.hw.filessearch.app.BaseActivity;
 
 /**
  * Created with IntelliJ IDEA.
