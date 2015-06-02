@@ -27,6 +27,9 @@ import java.util.List;
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class SearchFilesOperatorTest {
 
+    private static final String TEST_ROOT = "/";
+    private static final String TEST_SUB_DIRECTORY = "/test/";
+
     private SearchFilesOperator searchOperator;
 
     @Before
@@ -43,12 +46,7 @@ public class SearchFilesOperatorTest {
             }
 
             @Override
-            public void onSearchFileResultChange(SearchFileOperation searchOperation, List<File> matchedFilePaths) {
-
-            }
-
-            @Override
-            public void onFilesSearchEnd(SearchFileOperation searchOperation, List<File> matchedFilePaths, boolean forceStop) {
+            public void onFilesSearchEnd(SearchFileOperation searchOperation, List<File> matchedFilePaths) {
 
             }
         };
@@ -57,9 +55,15 @@ public class SearchFilesOperatorTest {
     }
 
     @Test
+    public void setSearchKeyword() throws Exception {
+        searchOperator.searchFileByKeywordOnDirectories("test", null);
+        Assert.assertEquals("test", searchOperator.getSearchingKeyword());
+    }
+
+    @Test
     public void searchNotExistFiles_shouldNotNull() throws Exception {
         ArrayList<String> testPathList = new ArrayList<>(1);
-        testPathList.add("/data/data/");
+        testPathList.add(TEST_ROOT);
         SearchFilesListener searchListener = new SearchFilesListener() {
             @Override
             public void onSearchFileStart(SearchFileOperation searchOperation) {
@@ -67,14 +71,8 @@ public class SearchFilesOperatorTest {
             }
 
             @Override
-            public void onSearchFileResultChange(SearchFileOperation searchOperation, List<File> matchedFilePaths) {
-
-            }
-
-            @Override
-            public void onFilesSearchEnd(SearchFileOperation searchOperation, List<File> matchedFilePaths, boolean forceStop) {
+            public void onFilesSearchEnd(SearchFileOperation searchOperation, List<File> matchedFilePaths) {
                 Assert.assertEquals(0, matchedFilePaths.size());
-                Assert.assertEquals(false, forceStop);
             }
         };
 
@@ -85,7 +83,7 @@ public class SearchFilesOperatorTest {
     @Test
     public void searchExistFiles_returnOneFile() throws Exception {
         ArrayList<String> directoryPaths = new ArrayList<>(1);
-        directoryPaths.add("/data/data");
+        directoryPaths.add(TEST_ROOT);
         SearchFilesListener searchListener = new SearchFilesListener() {
             @Override
             public void onSearchFileStart(SearchFileOperation searchOperation) {
@@ -93,17 +91,12 @@ public class SearchFilesOperatorTest {
             }
 
             @Override
-            public void onSearchFileResultChange(SearchFileOperation searchOperation, List<File> matchedFilePaths) {
-
-            }
-
-            @Override
-            public void onFilesSearchEnd(SearchFileOperation searchOperation, List<File> matchedFilePaths, boolean forceStop) {
-                Assert.assertEquals(1, matchedFilePaths.size());
+            public void onFilesSearchEnd(SearchFileOperation searchOperation, List<File> matchedFilePaths) {
+                Assert.assertEquals(2, matchedFilePaths.size());
             }
         };
 
         searchOperator.setSearchFilesListener(searchListener);
-        searchOperator.searchFileByKeywordOnDirectories("111", directoryPaths);
+        searchOperator.searchFileByKeywordOnDirectories("file", directoryPaths);
     }
 }

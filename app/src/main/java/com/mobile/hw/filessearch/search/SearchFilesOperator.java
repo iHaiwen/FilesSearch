@@ -21,7 +21,6 @@ public class SearchFilesOperator implements SearchFileOperation{
 
     private final ArrayList<File> matchedFileArrayList = new ArrayList<>(20);
     private String searchKeyword;
-    private boolean forceStop;
 
 
     public SearchFilesOperator() {
@@ -44,23 +43,34 @@ public class SearchFilesOperator implements SearchFileOperation{
 
     @Override
     public void searchFileByKeywordOnDirectories(String keyword, List<String> directoryPaths) {
-
-    }
-
-    @Override
-    public boolean searching() {
-        return false;
-    }
-
-    @Override
-    public void forceStop() {
-
-    }
-
-    private void searchFileByKeywordOnPath(String keyword, String parentDirPath) {
-        forceStop = false;
         this.searchKeyword = keyword;
         matchedFileArrayList.clear();
+        if (directoryPaths == null || directoryPaths.isEmpty()) {
+            return;
+        }
+
+        //
+        for (String filePath : directoryPaths) {
+            searchFileByKeywordOnPath(keyword, filePath);
+        }
+    }
+
+    @Override
+    public String getSearchingKeyword() {
+        return searchKeyword;
+    }
+
+
+
+
+
+    /*
+    private methods
+     */
+
+
+
+    private void searchFileByKeywordOnPath(String keyword, String parentDirPath) {
         callbackWhenSearchStart();
 
         //
@@ -84,39 +94,7 @@ public class SearchFilesOperator implements SearchFileOperation{
 
         //
         matchedFileArrayList.addAll(Arrays.asList(parentDir.listFiles(new MatchedFileFilter(keyword))));
-        //findMatchedFilesOnDirectory(parentDir);
         callbackWhenSearchEnd();
-    }
-
-//    public void stopSearching() {
-//        forceStop = true;
-//    }
-
-
-    /*
-    private methods
-     */
-
-
-    private void findMatchedFilesOnDirectory(File directory) {
-        File[] listFiles = directory.listFiles();
-        for (File aFile : listFiles) {
-            if (forceStop) {
-                break;
-            }
-
-            //
-            if (aFile.isDirectory()) {
-                findMatchedFilesOnDirectory(aFile);
-            }
-            else {
-                String fileName = aFile.getName();
-                if (fileName.contains(searchKeyword)) {
-                    matchedFileArrayList.add(aFile);
-                    callbackWhenFindMatchedFile();
-                }
-            }
-        }
     }
 
 
@@ -130,13 +108,7 @@ public class SearchFilesOperator implements SearchFileOperation{
 
     private void callbackWhenSearchEnd() {
         if (searchFilesListener != null) {
-            searchFilesListener.onFilesSearchEnd(this, matchedFileArrayList, true);
-        }
-    }
-
-    private void callbackWhenFindMatchedFile() {
-        if (searchFilesListener != null) {
-            searchFilesListener.onSearchFileResultChange(this, matchedFileArrayList);
+            searchFilesListener.onFilesSearchEnd(this, matchedFileArrayList);
         }
     }
 }

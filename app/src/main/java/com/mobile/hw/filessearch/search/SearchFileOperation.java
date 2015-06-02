@@ -18,7 +18,9 @@ public interface SearchFileOperation {
 
     public void searchFileByKeywordOnDirectories(String keyword, List<String> directoryPaths);
 
-    public boolean searching();
+    public String getSearchingKeyword();
 
-    public void forceStop();
+//    public boolean searching();
+//
+//    public void forceStop();
 }

@@ -13,9 +13,8 @@ public interface SearchFilesListener {
 
     public void onSearchFileStart(SearchFileOperation searchOperation);
 
-    public void onSearchFileResultChange(SearchFileOperation searchOperation,
-            List<File> matchedFilePaths);
+//    public void onSearchFileResultChange(SearchFileOperation searchOperation,
+//            List<File> matchedFilePaths);
 
-    public void onFilesSearchEnd(SearchFileOperation searchOperation, List<File> matchedFilePaths,
-            boolean forceStop);
+    public void onFilesSearchEnd(SearchFileOperation searchOperation, List<File> matchedFilePaths);
 }
