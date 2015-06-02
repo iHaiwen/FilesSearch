@@ -15,16 +15,20 @@ import java.util.List;
  * 搜索符合名字的文件
  * 建议在非主线程中调用
  */
-public class SearchFilesLogic implements SearchFileOperation{
+public class SearchFilesOperator implements SearchFileOperation{
 
-    public SearchFilesListener searchFilesListener;
+    private SearchFilesListener searchFilesListener;
 
     private final ArrayList<File> matchedFileArrayList = new ArrayList<>(20);
     private String searchKeyword;
     private boolean forceStop;
 
 
-    public SearchFilesLogic(SearchFilesListener searchFilesListener) {
+    public SearchFilesOperator() {
+        this(null);
+    }
+
+    public SearchFilesOperator(SearchFilesListener searchFilesListener) {
         this.searchFilesListener = searchFilesListener;
     }
 
@@ -53,7 +57,7 @@ public class SearchFilesLogic implements SearchFileOperation{
 
     }
 
-    public void searchFileByKeywordOnPath(String keyword, String parentDirPath) {
+    private void searchFileByKeywordOnPath(String keyword, String parentDirPath) {
         forceStop = false;
         this.searchKeyword = keyword;
         matchedFileArrayList.clear();

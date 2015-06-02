@@ -2,7 +2,7 @@ package com.mobile.hw.filessearch;
 
 
 import com.mobile.hw.filessearch.search.SearchFileOperation;
-import com.mobile.hw.filessearch.search.SearchFilesLogic;
+import com.mobile.hw.filessearch.search.SearchFilesOperator;
 import com.mobile.hw.filessearch.settingdata.SettingContent;
 import com.mobile.hw.filessearch.settingdata.SettingPreference;
 
@@ -29,7 +29,7 @@ public class ObjectFactory {
 
     public static synchronized SearchFileOperation createSearchOperation() {
         if (searchOperation == null) {
-            searchOperation = new SearchFilesLogic(null);
+            searchOperation = new SearchFilesOperator(null);
         }
 
         return searchOperation;
