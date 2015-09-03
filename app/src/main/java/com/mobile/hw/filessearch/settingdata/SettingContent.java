@@ -16,5 +16,5 @@ public interface SettingContent {
 
     public boolean addSearchDirectoryPath(String path);
 
-    public boolean openFileWhenOneFileMatched();
+    public boolean clean();
 }

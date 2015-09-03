@@ -29,6 +29,7 @@ public class SettingPreference implements SettingContent {
     private final String DIRECTORY_PATHS_KEY = "DIRECTORY_PATHS";
     private final String AUTO_OPEN_WHEN_SINGLE_FILE_KEY = "AUTO_OPEN_WHEN_SINGLE_FILE";
 
+
     public SettingPreference() {
         readPreferenceData();
     }
@@ -51,7 +52,8 @@ public class SettingPreference implements SettingContent {
     }
 
     @Override
-    public boolean openFileWhenOneFileMatched() {
+    public boolean clean() {
+        preferences().edit().clear().apply();
         return true;
     }
 

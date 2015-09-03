@@ -10,6 +10,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.mobile.hw.filessearch.R;
 import com.mobile.hw.filessearch.app.BaseActivity;
+import com.mobile.hw.filessearch.search.SearchFileOperation;
+import com.mobile.hw.filessearch.search.SearchFilesListener;
+import com.mobile.hw.filessearch.search.SearchFilesOperator;
+
+import java.io.File;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,6 +36,8 @@ public class SearchResultActivity extends BaseActivity {
     private TextView nonDataTextView;
     private ListView searchResultListView;
     private View searchButton;
+
+    private SearchFileOperation searchOperation;
 
     private String keyword;
     private boolean isFirstVisible;
@@ -79,6 +87,9 @@ public class SearchResultActivity extends BaseActivity {
     private void initParams() {
         isFirstVisible = true;
         keyword = getIntent().getData().getQueryParameter("keyword");
+
+        //
+        searchOperation = new SearchFilesOperator(searchFilesListener);
     }
 
     private void initEvents() {
@@ -104,6 +115,24 @@ public class SearchResultActivity extends BaseActivity {
 
     //
 
+    private SearchFilesListener searchFilesListener = new SearchFilesListener() {
+        @Override
+        public void onSearchFileStart(SearchFileOperation searchOperation) {
+            showProgressDialog("正在搜索...", new DialogInterface.OnCancelListener() {
+
+                @Override
+                public void onCancel(DialogInterface dialogInterface) {
+                    dismissDialog();
+                }
+            });
+        }
+
+        @Override
+        public void onFilesSearchEnd(SearchFileOperation searchOperation, List<File> matchedFilePaths) {
+            dismissDialog();
+        }
+    };
+
     private void searchAction() {
         if (TextUtils.isEmpty(keyword)) {
             showMessageInToast("搜索不能为空哦！");
@@ -111,17 +140,7 @@ public class SearchResultActivity extends BaseActivity {
         }
 
         //
-        searchKeyword(keywordEditText.getText().toString());
-    }
-
-    private void searchKeyword(String word) {
-        showProgressDialog("正在搜索...", new DialogInterface.OnCancelListener() {
-
-            @Override
-            public void onCancel(DialogInterface dialogInterface) {
-                dismissDialog();
-            }
-        });
+//        searchOperation.searchFileByKeywordOnDirectories(keywordEditText.getText().toString(), );
     }
 
     //common
